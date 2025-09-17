@@ -13,10 +13,10 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
+    public function index() {
+        return \App\Models\Post::orderBy('created_at', 'desc')->get();
     }
+    
 
     /**
      * Show the form for creating a new resource.
